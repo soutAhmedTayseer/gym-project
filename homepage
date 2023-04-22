@@ -313,6 +313,14 @@
         }
       }
       /* end footer */
+
+      /* Rounded border */
+      hr.rounded {
+        border-top: 5px solid tomato;
+        border-radius: 2px;
+        width: 50%;
+        margin-left: 500px;
+      }
     </style>
   </head>
   <body>
@@ -345,20 +353,26 @@
             numquam, sequi assumenda nam, vel nihil repudiandae omnis eveniet
             est excepturi atque molestias at dolores fugit!
           </p>
-          <button class="btn">Get started</button>
+          <a
+            href="file:///C:/Users/Rep%20JGL/OneDrive/Desktop/project/login.html#"
+            target="_blank"
+            ><button class="btn">Get started</button></a
+          >
         </div>
         <div class="home-image">
           <img src="p1.webp" alt="" />
         </div>
       </div>
     </section>
+    <p>Rounded</p>
+    <hr class="rounded" />
 
-    <div class="preview0">
-      <h1><i class="fas fa-dumbbell"></i> Take a Look About Our Gym</h1>
+    <div class="preview0" id="preview">
+      <h1><i class="fas fa-dumbbell"></i> Take a Look at Our Gym</h1>
     </div>
 
     <section>
-      <div class="preview" id="preview">
+      <div class="preview">
         <div class="box">
           <img src="p2.jpg" />
         </div>
@@ -391,49 +405,52 @@
       </div>
     </section>
 
+    <p>Rounded</p>
+    <hr class="rounded" />
+
     <section>
       <div class="container" id="pricing">
         <h1>Choose Your Plan</h1>
         <div class="Price-row">
           <div class="price-col" data-tilt>
             <h4>1 Month</h4>
-            <h3>$ 450 <span>/ Month</span></h3>
+            <h3>$ 450</h3>
             <ul>
               <li>1 Month</li>
-              <li>no private coach</li>
               <li>cardio</li>
-              <li>no online coaching</li>
               <li>nutrions included</li>
             </ul>
-            <button>Add To Cart</button>
+            <button style="margin-top: 110px">Add To Cart</button>
           </div>
           <div class="price-col" data-tilt>
             <h4>6 Month</h4>
-            <h3>$ 2500 <span>/ Year</span></h3>
+            <h3>$ 2500</h3>
             <ul>
               <li>6 Month</li>
               <li>private coach</li>
               <li>cardio</li>
-              <li>online coaching</li>
-              <li>nutrions included</li>
+              <li>nutritions included</li>
             </ul>
-            <button>Add To Cart</button>
+            <button style="margin-top: 70px">Add To Cart</button>
           </div>
           <div class="price-col" data-tilt>
             <h4>1 Year</h4>
-            <h3>$ 4500 <span>/ Year</span></h3>
+            <h3>$ 4500</h3>
             <ul>
               <li>12 Month</li>
               <li>private coach</li>
               <li>cardio</li>
               <li>online coaching</li>
-              <li>nutrions included</li>
+              <li>nutritions included</li>
             </ul>
             <button>Add To Cart</button>
           </div>
         </div>
       </div>
     </section>
+
+    <p>Rounded</p>
+    <hr class="rounded" />
 
     /*footer*/
 
