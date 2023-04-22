@@ -120,6 +120,50 @@
       }
 
       /*End Main*/
+
+      /* preview*/
+
+      .preview0 {
+        margin-left: 10px;
+        color: #fff;
+        font-size: 20px;
+        padding: 50px 0;
+        text-align: center;
+      }
+
+      .preview {
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+      }
+
+      .preview h1 {
+        color: #fff;
+        font-size: 40px;
+        padding: 50px 0;
+        text-align: center;
+      }
+
+      .box {
+        width: 250px;
+        margin: 0 110px;
+        box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.1);
+        transition: 1s;
+        border: 3px solid tomato;
+      }
+      .box img {
+        display: block;
+        width: 200%;
+      }
+      .box:hover {
+        transform: scale(1.3);
+        z-index: 2;
+        box-shadow: 0px 0px 0px 5px tomato;
+      }
+
+      /* end preview*/
+
       /*begin pricing*/
 
       .container {
@@ -276,6 +320,7 @@
       <a href="#" class="logo"> <i class="fas fa-dumbbell"></i>FitNess </a>
       <nav class="navbar">
         <a href="#">Home</a>
+        <a href="#preview">Preview</a>
         <a href="#pricing">Pricing</a>
         <a href="#footer1">Contact Us</a>
         <a href="#">|</a>
@@ -284,12 +329,6 @@
           target="_blank"
           class="btn"
           >Login</a
-        >
-        <a
-          href="file:///C:/Users/Rep%20JGL/OneDrive/Desktop/project/sign%20up.html"
-          target="_blank"
-          class="btn"
-          >Sign Up</a
         >
       </nav>
     </header>
@@ -313,46 +352,82 @@
         </div>
       </div>
     </section>
+
+    <div class="preview0">
+      <h1><i class="fas fa-dumbbell"></i> Take a Look About Our Gym</h1>
+    </div>
+
+    <section>
+      <div class="preview" id="preview">
+        <div class="box">
+          <img src="p2.jpg" />
+        </div>
+        <div class="box">
+          <img src="p2.jpg" />
+        </div>
+        <div class="box">
+          <img src="p2.jpg" />
+        </div>
+        <div class="box">
+          <img src="p2.jpg" />
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="preview">
+        <div class="box">
+          <img src="p2.jpg" />
+        </div>
+        <div class="box">
+          <img src="p2.jpg" />
+        </div>
+        <div class="box">
+          <img src="p2.jpg" />
+        </div>
+        <div class="box">
+          <img src="p2.jpg" />
+        </div>
+      </div>
+    </section>
+
     <section>
       <div class="container" id="pricing">
         <h1>Choose Your Plan</h1>
         <div class="Price-row">
           <div class="price-col" data-tilt>
             <h4>1 Month</h4>
-            <h3>$ 9.90 <span>/ Month</span></h3>
+            <h3>$ 450 <span>/ Month</span></h3>
             <ul>
               <li>1 Month</li>
-              <li>10 GB Disk Space</li>
-              <li>Free Email address</li>
-              <li>Basic Web Builder</li>
-              <li>No SSL Certificate</li>
-              <li>Limited Support</li>
+              <li>no private coach</li>
+              <li>cardio</li>
+              <li>no online coaching</li>
+              <li>nutrions included</li>
+            </ul>
+            <button>Add To Cart</button>
+          </div>
+          <div class="price-col" data-tilt>
+            <h4>6 Month</h4>
+            <h3>$ 2500 <span>/ Year</span></h3>
+            <ul>
+              <li>6 Month</li>
+              <li>private coach</li>
+              <li>cardio</li>
+              <li>online coaching</li>
+              <li>nutrions included</li>
             </ul>
             <button>Add To Cart</button>
           </div>
           <div class="price-col" data-tilt>
             <h4>1 Year</h4>
-            <h3>$ 49.90 <span>/ Year</span></h3>
+            <h3>$ 4500 <span>/ Year</span></h3>
             <ul>
               <li>12 Month</li>
-              <li>1000 GB Disk Space</li>
-              <li>Free Email address</li>
-              <li>Full Web Builder</li>
-              <li>SSL Certificate</li>
-              <li>UnLimited Support</li>
-            </ul>
-            <button>Add To Cart</button>
-          </div>
-          <div class="price-col" data-tilt>
-            <h4>1 Year</h4>
-            <h3>$ 49.90 <span>/ Year</span></h3>
-            <ul>
-              <li>12 Month</li>
-              <li>1000 GB Disk Space</li>
-              <li>Free Email address</li>
-              <li>Full Web Builder</li>
-              <li>SSL Certificate</li>
-              <li>UnLimited Support</li>
+              <li>private coach</li>
+              <li>cardio</li>
+              <li>online coaching</li>
+              <li>nutrions included</li>
             </ul>
             <button>Add To Cart</button>
           </div>
@@ -412,6 +487,5 @@
         src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
       ></script>
     </section>
-    <script src="vanilla-tilt.js"></script>
   </body>
 </html>
