@@ -31,13 +31,13 @@
         width: 150px;
         padding: 12px;
         color: #fff;
-        background: tomato;
+        background: linear-gradient(135deg, tomato, #000);
         font-size: 16px;
         border-radius: 4px;
         cursor: pointer;
       }
       .btn:hover {
-        background: rgba(212, 48, 48, 0.76);
+        background: linear-gradient(135deg, #000, tomato);
         transition: 0.4s;
       }
       /* Header */
@@ -73,7 +73,7 @@
         color: #baa6cf;
       }
       .header .btn {
-        background: transparent;
+        background: linear-gradient(135deg, #000, tomato);
         color: tomato;
         border: 1px solid tomato;
         font-size: 12px;
