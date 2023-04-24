@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>profile</title>
     <style>
       /* preview*/
       * {
@@ -57,23 +57,168 @@
         z-index: 2;
         box-shadow: 0px 0px 0px 0px tomato;
       }
+      .flexing {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+      }
+
+      /*profile*/
+      .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        max-width: 300px;
+        margin: auto;
+        text-align: center;
+      }
+
+      .title {
+        color: grey;
+        font-size: 18px;
+      }
+
+      button {
+        border: none;
+        outline: 0;
+        display: inline-block;
+        padding: 8px;
+        color: white;
+        background-color: #000;
+        text-align: center;
+        cursor: pointer;
+        width: 100%;
+        font-size: 18px;
+      }
+
+      a {
+        text-decoration: none;
+        font-size: 22px;
+        color: black;
+      }
+
+      button:hover,
+      a:hover {
+        opacity: 0.7;
+      }
+
+      /*sub progress bar*/
+      .sub {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        padding: 5px 0;
+        border-radius: 8px;
+        background: #000;
+        row-gap: 30px;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .circular-progress {
+        position: relative;
+        height: 250px;
+        width: 250px;
+        border-radius: 50%;
+        background: conic-gradient(tomato 3.6deg, #ededed 0deg);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .circular-progress::before {
+        content: "";
+        position: absolute;
+        height: 210px;
+        width: 210px;
+        border-radius: 50%;
+        background-color: #000;
+      }
+      .progress-value {
+        position: relative;
+        font-size: 40px;
+        font-weight: 600;
+        color: tomato;
+      }
+
+      .text {
+        font-size: 30px;
+        font-weight: 500;
+        color: tomato;
+      }
 
       /* end preview*/
     </style>
   </head>
   <body>
     <section>
-      <div class="preview">
-        <div class="box">
-          <a href="#"><img src="profilee.png" /></a>
+      <div class="flexing">
+        <div class="preview">
+          <div class="box">
+            <a href="#profile"><img src="profilee.png" /></a>
+          </div>
+          <div class="box">
+            <a href="#subscription"><img src="sub.png" /></a>
+          </div>
+          <div class="box">
+            <a href="https://www.youtube.com/@GymLeague/playlists"
+              ><img src="workoutt.png"
+            /></a>
+          </div>
+          <div class="box">
+            <a href="#QR"><img src="qr.png" /></a>
+          </div>
         </div>
-        <div class="box">
-          <a href="#"><img src="sub.png" /></a>
-        </div>
-        <div class="box">
-          <a href="#"><img src="workoutt.png" /></a>
+
+        <div class="preview2">
+          <div id="profile">
+            <div class="card">
+              <img src="p1.webp" alt="John" style="width: 100%" />
+              <h1>John Doe</h1>
+              <p class="title">CEO & Founder, Example</p>
+              <p>Harvard University</p>
+              <a href="#"><i class="fa fa-dribbble"></i></a>
+              <a href="#"><i class="fa fa-twitter"></i></a>
+              <a href="#"><i class="fa fa-linkedin"></i></a>
+              <a href="#"><i class="fa fa-facebook"></i></a>
+              <p><button>Contact</button></p>
+            </div>
+          </div>
+
+          <div id="subscription">
+            <div class="sub">
+              <div class="circular-progress">
+                <span class="progress-value"></span>
+              </div>
+
+              <span class="text">Your Subscription</span>
+            </div>
+          </div>
+
+          <div id="workout"></div>
         </div>
       </div>
     </section>
+
+    <script>
+      let circularProgress = document.querySelector(".circular-progress"),
+        progressValue = document.querySelector(".progress-value");
+
+      let progressStartValue = 0,
+        progressEndValue = 50,
+        speed = 30;
+
+      let progress = setInterval(() => {
+        progressStartValue++;
+
+        progressValue.textContent = `${progressStartValue}%`;
+        circularProgress.style.background = `conic-gradient(tomato ${
+          progressStartValue * 3.6
+        }deg, #ededed 0deg)`;
+
+        if (progressStartValue == progressEndValue) {
+          clearInterval(progress);
+        }
+      }, speed);
+    </script>
   </body>
 </html>
