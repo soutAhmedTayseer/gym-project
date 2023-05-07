@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test checkPassword function</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .fulfilled {
+            text-decoration: line-through;
+        }
+        .fa-heart {
+            color: #061994;
+        }
+        .full {
+            color: rgb(2, 16, 141);
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="passwordInput" placeholder="Enter password" oninput="testFunction()">
+    <br>
+    <i class="far fa-heart" id="heart1"></i>
+    <i class="far fa-heart" id="heart2"></i>
+    <i class="far fa-heart" id="heart3"></i>
+    <i class="far fa-heart" id="heart4"></i>
+    <i class="far fa-heart" id="heart5"></i>
+    <p id="result">
+        <span id="length">Password must be at least 8 characters long.</span><br>
+        <span id="uppercase">Password must contain at least one uppercase letter.</span><br>
+        <span id="lowercase">Password must contain at least one lowercase letter.</span><br>
+        <span id="number">Password must contain at least one number.</span><br>
+        <span id="special">Password must contain at least one special character.</span><br>
+    </p>
+
+    <script>
+        function checkPassword(password) {
+            var progress = 0;
+            if (password.length >= 8) {
+                progress++;
+                document.getElementById("length").classList.add("fulfilled");
+            } else {
+                document.getElementById("length").classList.remove("fulfilled");
+            }
+            if (password.match(/[A-Z]/)) {
+                progress++;
+                document.getElementById("uppercase").classList.add("fulfilled");
+            } else {
+                document.getElementById("uppercase").classList.remove("fulfilled");
+            }
+            if (password.match(/[a-z]/)) {
+                progress++;
+                document.getElementById("lowercase").classList.add("fulfilled");
+            } else {
+                document.getElementById("lowercase").classList.remove("fulfilled");
+            }
+            if (password.match(/\d/)) {
+                progress++;
+                document.getElementById("number").classList.add("fulfilled");
+            } else {
+                document.getElementById("number").classList.remove("fulfilled");
+            }
+            if (password.match(/[\W_]/)) {
+                progress++;
+                document.getElementById("special").classList.add("fulfilled");
+            } else {
+                document.getElementById("special").classList.remove("fulfilled");
+            }
+
+            for (var i = 1; i <= 5; i++) {
+                if (progress >= i) {
+                    document.getElementById(`heart${i}`).classList.add("fas", "full");
+                } else {
+                    document.getElementById(`heart${i}`).classList.remove("fas", "full");
+                }
+            }
+
+            return progress;
+        }
+
+        function testFunction() {
+            var password = document.getElementById("passwordInput").value;
+            var progress = checkPassword(password);
+        }
+    </script>
+</body>
+</html>
