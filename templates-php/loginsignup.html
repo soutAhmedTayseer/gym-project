@@ -1,6 +1,6 @@
-<?php
+<!--<?php
 session_start();
-?>
+?>-->
 
 <!doctype html>
 <html lang="en">
@@ -22,6 +22,16 @@ session_start();
 </head>
 
 <body>
+	<header class="header">
+		<a href="#" class="logo"> <i class="fas fa-dumbbell"></i>FitNess </a>
+		<nav class="navbar">
+			<a href="#">Home</a>
+			<a href="#preview">Preview</a>
+			<a href="#pricing">Pricing</a>
+			<a href="#footer1">Contact Us</a>
+
+		</nav>
+	</header>
 	<video id="background-video" autoplay loop muted poster="vid.mp4">
 		<source src="vid.mp4" type="video/mp4">
 	</video>
@@ -136,12 +146,12 @@ session_start();
 													<i class="input-icon uil uil-calendar-alt"></i>
 												</div>
 												<div class="gender justify-content-center">
-													<label style="--clr:#ffeba7;">
+													<label style="--clr:#ffffff;">
 														<input type="radio" name="reg-genderfield" value="male">
 														<i></i>
 														<span>Male</span>
 													</label>
-													<label style="--clr:#ffeba7;">
+													<label style="--clr:#ffffff;">
 														<input type="radio" name="reg-genderfield" value="female">
 														<i></i>
 														<span>Female</span>
@@ -216,7 +226,7 @@ session_start();
 			</div>
 		</div>
 	</div>
-	<?php
+	<!--<?php
 	require 'connection.php';
 	require 'errordialog.php';
 	if ($_SERVER['REQUEST_METHOD'] == 'POST') {
