@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Font Awesome Cdn Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="#" class="logo">
+                        <img src="alexander-hipp-iEEBWgY_6lA-unsplash.jpg">
+                        <span class="nav-item">Name</span>
+                    </a></li>
+                <li><a href="#">
+                        <i class="fas fa-user"></i>
+                        <span class="nav-item">Profile</span>
+                    </a></li>
+                <li><a href="#">
+                        <i class="fas fa-dumbbell"></i>
+                        <span class="nav-item">Workout</span>
+                    </a></li>
+
+                <li><a href="#">
+                        <i class="fas fa-heartbeat"></i>
+                        <span class="nav-item">Recovery</span>
+                    </a></li>
+                <li><a href="#">
+                        <i class="fas fa-cog"></i>
+                        <span class="nav-item">Setting</span>
+                    </a></li>
+
+                <li><a href="#" class="logout" id="logout-btn">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span class="nav-item">Log out</span>
+                    </a></li>
+            </ul>
+        </nav>
+
+        <div>
+
+            <div class="containers" id="pricing">
+                <form action="">
+                    <div class="forms">
+                        <div class="account-settings" data-tilt>
+                            <div class="text">
+                                <div>
+                                    <h3 class="mb-4">Account Settings</h3>
+                                </div>
+                                <hr class="hr">
+                                <div class="col-md-6">
+                                    <div class="form-group" style="    margin-left: -175px;
+                                    margin-top: 36px;">
+                                        <label>First Name</label>
+                                        <input type="text" class="form-control" id="fn-field" name="fn-field">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group" style="    margin-left: 470px;
+                                    margin-top: -89px;">
+                                        <label class="modify">Last Name</label>
+                                        <input type="text" class="form-control" id="ln-field" name="ln-field">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group" style="margin-left: -175px;">
+                                        <label>Email</label>
+                                        <input type="text" class="form-control" id="em-field" name="em-field">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group" style="        margin-left: 470px;
+                                    margin-top: -89px;">
+                                        <label class="modify">Phone number</label>
+                                        <input type="tel" class="form-control" id="tel-field" name="tel-field">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group" style="margin-left: -175px;">
+                                        <label>Birth Date</label>
+                                        <input type="date" class="form-control" id="bd-field" name="bd-field" disabled>
+                                    </div>
+                                    <input type="submit" class="btn " value=" Update"
+                                        style="        margin-left: 881px;"></input>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group" style="        margin-left: 470px;
+                                    margin-top: -128px;">
+                                        <label class="modify">Subscription</label>
+                                        <input type="text" class="form-control" id="sub-field" name="sub-field"
+                                            disabled>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                </form>
+                <form action="">
+                    <div class="password" data-tilt>
+                        <div class="text">
+                            <div>
+                                <h3 class="mb-4" style="    margin-top: -136px;
+                                margin-left: -171px;">Password Settings</h3>
+                            </div>
+                            <hr class="hr" style="margin-top: -36px;">
+                            <div class="col-md-6">
+                                <div class="form-group" style="    margin-left: -175px;
+                                margin-top: 36px;">
+                                    <label>Old Password</label>
+                                    <input type="password" class="form-control" id="fn-field" name="fn-field">
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="form-group" style="margin-left: -175px;">
+                                    <label>New Password</label>
+                                    <input type="password" class="form-control" id="em-field" name="em-field">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group" style="        margin-left: 470px;
+                                margin-top: -89px;">
+                                    <label class="modify">Confirm Password</label>
+                                    <input type="password" class="form-control" id="tel-field" name="tel-field">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+
+                                <input type="submit" class="btn " value=" Update"
+                                    style="        margin-left: 881px;"></input>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </form>
+                <form action="">
+
+                    <div class="security" data-tilt>
+                        <div class="text">
+                            <div>
+                                <h3 class="mb-4" style="    margin-top: -136px;
+                                margin-left: -171px;">Security Settings</h3>
+                            </div>
+                            <hr class="hr" style="margin-top: -36px;">
+
+
+                            <div class="col-md-6">
+                                <div class="form-group" style="margin-left: -175px; margin-top: 50px;">
+                                    <label>Login</label>
+                                    <input type="email" class="form-control" id="em-field" name="em-field">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group" style="        margin-left: 470px;
+                                margin-top: -89px;">
+                                    <label class="modify">
+                                        Two-factor auth</label>
+                                    <input type="text" class="form-control" id="tel-field" name="tel-field">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+
+                                <input type="submit" class="btn " value=" Update"
+                                    style="        margin-left: 881px;"></input>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
