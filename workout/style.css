@@ -1,0 +1,484 @@
+/*  import google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: rgb(242, 242, 242);
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  bottom: 0;
+  height: 100vh;
+  left: 0;
+  width: 90px;
+  /* width: 280px; */
+  background: #fff;
+  overflow: hidden;
+  transition: 1s;
+  background: #121313;
+}
+
+nav:hover {
+  width: 240px;
+  transition: 1s;
+}
+
+.logo {
+  text-align: center;
+  display: flex;
+  margin: 10px 0 0 10px;
+  padding-bottom: 3rem;
+}
+
+.logo img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+
+.logo span {
+  font-weight: bold;
+  padding-left: 15px;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+a {
+  position: relative;
+  width: 280px;
+  font-size: 14px;
+  color: rgb(255, 255, 255);
+  display: table;
+  padding: 10px;
+}
+
+nav .fas {
+  position: relative;
+  width: 70px;
+  height: 40px;
+  top: 20px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.nav-item {
+  position: relative;
+  top: 12px;
+  margin-left: 10px;
+}
+
+a:hover {
+  background: #2e2e2e;
+}
+
+#logout-btn:hover {
+  background: #d70338;
+}
+
+a:hover i {
+  color: #ffffff;
+  transition: 0.5s;
+}
+
+.logout {
+  position: absolute;
+  bottom: 0;
+}
+
+/* .logout:hover{
+  color: ;
+} */
+
+.container {
+  display: flex;
+}
+
+.containers {
+  width: 1369px;
+
+}
+
+/* MAin Section */
+.main {
+  position: relative;
+  padding: 20px;
+  width: 100%;
+}
+
+.main-top {
+  display: flex;
+  width: 100%;
+}
+
+.main-top i {
+  position: absolute;
+  right: 0;
+  margin: 10px 30px;
+  color: rgb(110, 109, 109);
+  cursor: pointer;
+}
+
+.main .users {
+  display: flex;
+  width: 100%;
+}
+
+.users .card {
+  width: 25%;
+  margin: 10px;
+  background: #fff;
+  text-align: center;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+
+.users .card img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+.users .card h4 {
+  text-transform: uppercase;
+}
+
+.users .card p {
+  font-size: 12px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.users table {
+  margin: auto;
+}
+
+.users .per span {
+  padding: 5px;
+  border-radius: 10px;
+  background: rgb(223, 223, 223);
+}
+
+.users td {
+  font-size: 14px;
+  padding-right: 15px;
+}
+
+.users .card button {
+  width: 100%;
+  margin-top: 8px;
+  padding: 7px;
+  cursor: pointer;
+  border-radius: 10px;
+  background: transparent;
+  border: 1px solid #4AD489;
+}
+
+.users .card button:hover {
+  background: #4AD489;
+  color: #fff;
+  transition: 0.5s;
+}
+
+/*Attendance List serction  */
+.attendance {
+  margin-top: 20px;
+  text-transform: capitalize;
+}
+
+.attendance-list {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+
+.table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 15px;
+  min-width: 100%;
+  overflow: hidden;
+  border-radius: 5px 5px 0 0;
+}
+
+table thead tr {
+  color: #fff;
+  background: #34AF6D;
+  text-align: left;
+  font-weight: bold;
+}
+
+.table th,
+.table td {
+  padding: 12px 15px;
+}
+
+.table tbody tr {
+  border-bottom: 1px solid #ddd;
+}
+
+.table tbody tr:nth-of-type(odd) {
+  background: #f3f3f3;
+}
+
+.table tbody tr.active {
+  font-weight: bold;
+  color: #4AD489;
+}
+
+.table tbody tr:last-of-type {
+  border-bottom: 2px solid #4AD489;
+}
+
+.table button {
+  padding: 6px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid #4AD489;
+}
+
+.table button:hover {
+  background: #4AD489;
+  color: #fff;
+  transition: 0.5rem;
+}
+
+.price-col1 {
+  background: #151717;
+  box-shadow: 4px 4px 4px 3px #bebebe;
+  border-radius: 10px;
+  color: #fff;
+  margin-left: 157px;
+  width: 380px;
+  margin-top: 135px;
+  height: 765px;
+
+}
+
+/* .price-col1:hover {
+
+} */
+
+.price-col1 h4 {
+  font-size: 52px;
+}
+
+.price-col1 h3 {
+  font-size: 44px;
+  margin: 20px 0 40px;
+  font-weight: 500;
+}
+
+.price-col1 h3 span {
+  font-size: 20px;
+  color: #0093E9;
+}
+
+.price-col1 ul {
+  text-align: left;
+  cursor: pointer;
+  margin: 20px 0;
+  color: #ddd;
+  list-style: none;
+}
+
+.price-col1 ul li {
+  margin: 15px 0;
+}
+
+.price-col1 ul li::before {
+  content: "\2022";
+  color: #fff;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+.price-col2 {
+  background: #151717;
+  box-shadow: 4px 4px 4px 3px #bebebe;
+  border-radius: 10px;
+  color: #fff;
+  margin-left: 704px;
+  width: 380px;
+  margin-top: -765px;
+  height: 765px;
+
+
+}
+
+
+
+
+.price-col2 h4 {
+  font-size: 52px;
+}
+
+.price-col2 h3 {
+  font-size: 44px;
+  margin: 20px 0 40px;
+  font-weight: 500;
+}
+
+.price-col2 h3 span {
+  font-size: 20px;
+  color: #0093E9;
+}
+
+.price-col2 ul {
+  text-align: left;
+  cursor: pointer;
+  margin: 20px 0;
+  color: #ddd;
+  list-style: none;
+}
+
+.price-col2 ul li {
+  margin: 15px 0;
+}
+
+.price-col2 ul li::before {
+  content: "\2022";
+  color: #fff;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+.price-col3 {
+  background: #151717;
+  box-shadow: 4px 4px 4px 3px #bebebe;
+  border-radius: 10px;
+  color: #fff;
+  margin-left: 1241px;
+  width: 380px;
+  margin-top: -765px;
+  height: 765px;
+}
+
+.price-col3 h4 {
+  font-size: 52px;
+}
+
+.price-col3 h3 {
+  font-size: 44px;
+  margin: 20px 0 40px;
+  font-weight: 500;
+}
+
+.price-col3 h3 span {
+  font-size: 20px;
+  color: #0093E9;
+}
+
+.price-col3 ul {
+  text-align: left;
+  cursor: pointer;
+  margin: 20px 0;
+  color: #ddd;
+  list-style: none;
+}
+
+.price-col3 ul li {
+  margin: 15px 0;
+}
+
+.price-col3 ul li::before {
+  content: "\2022";
+  color: #fff;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+.price-col4 {
+  background: white;
+  box-shadow: 4px 4px 4px 3px #bebebe;
+  padding: 10% 15%;
+  border-radius: 10px;
+  color: #fff;
+  width: 595px;
+  height: 420px;
+  margin-left: 990px;
+  margin-top: -420px;
+}
+
+.price-col4 h4 {
+  font-size: 52px;
+}
+
+.price-col4 h3 {
+  font-size: 44px;
+  margin: 20px 0 40px;
+  font-weight: 500;
+}
+
+.price-col4 h3 span {
+  font-size: 20px;
+  color: #0093E9;
+}
+
+.price-col4 ul {
+  text-align: left;
+  cursor: pointer;
+  margin: 20px 0;
+  color: #ddd;
+  list-style: none;
+}
+
+.price-col4 ul li {
+  margin: 15px 0;
+}
+
+.price-col4 ul li::before {
+  content: "\2022";
+  color: #fff;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+.text {
+  text-align: center;
+}
+
+.workout {
+  margin-top: -258px;
+  padding: 25px;
+  font-size: 22px;
+
+}
+
+.back {
+  margin-top: -242px;
+  margin-left: -295px;
+}
+
+.leg {
+  margin-top: -235px;
+  margin-left: -228px;
+}
+
+.chest {
+  margin-top: -254px;
+  margin-left: -230px;
+}
+
+#back {
+  font-size: 25px;
+}
+
+#chest {
+  font-size: 24px;
+}
