@@ -12,19 +12,20 @@ session_start();
 	<link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.9/css/unicons.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
-	<link rel="stylesheet" href="../Styles-css/project.css">
+	<link rel="stylesheet" href="../Styles-css/loginsign.css">
 	<link rel="stylesheet" href="../Styles-css/password.css">
 	<script type="text/javascript" src="../Modules-js/CheckEmpty.js"></script>
-	<script type="text/javascript" src="../Modules-js/errordialog.js"></script>
 	<script type="text/javascript" src="../Modules-js/EmailValidation.js"></script>
 	<script type="text/javascript" src="../Modules-js/PhoneNoValidation.js"></script>
-	<script type="text/javascript" src="../Modules-js/Resetfields.js"></script>
 </head>
 
 <body>
-	<video id="background-video" autoplay loop muted poster="vid.mp4">
-		<source src="vid.mp4" type="video/mp4">
-	</video>
+	<header class="header">
+		<a href="index.php" class="logo"> <i class="fas fa-dumbbell"></i>FitNess </a>
+		<nav class="navbar">
+			<a href="index.php" class="btn">Home</a>
+		</nav>
+	</header>
 	<div class="section">
 		<div class="container">
 			<div class="row full-height justify-content-center">
@@ -118,11 +119,11 @@ session_start();
 													<div id="password-strength">
 														<span>Password Strength: </span>
 														<i class="input-icon uil uil-lock-alt"></i>
-														<i class="far fa-heart" id="heart1"></i>
-														<i class="far fa-heart" id="heart2"></i>
-														<i class="far fa-heart" id="heart3"></i>
-														<i class="far fa-heart" id="heart4"></i>
-														<i class="far fa-heart" id="heart5"></i>
+														<i class="far fa-heart" style="color: #d70338" id="heart1"></i>
+														<i class="far fa-heart" style="color: #d70338" id="heart2"></i>
+														<i class="far fa-heart" style="color: #d70338" id="heart3"></i>
+														<i class="far fa-heart" style="color: #d70338" id="heart4"></i>
+														<i class="far fa-heart" style="color: #d70338" id="heart5"></i>
 													</div>
 												</div>
 												<div class="form-group mt-2">
@@ -136,12 +137,12 @@ session_start();
 													<i class="input-icon uil uil-calendar-alt"></i>
 												</div>
 												<div class="gender justify-content-center">
-													<label style="--clr:#ffeba7;">
+													<label style="--clr:#d70338;">
 														<input type="radio" name="reg-genderfield" value="male">
 														<i></i>
 														<span>Male</span>
 													</label>
-													<label style="--clr:#ffeba7;">
+													<label style="--clr:#d70338;">
 														<input type="radio" name="reg-genderfield" value="female">
 														<i></i>
 														<span>Female</span>
@@ -219,71 +220,112 @@ session_start();
 	<?php
 	require 'connection.php';
 	require 'errordialog.php';
+	require 'EmptyValidation.php';
+	require 'PhoneNoValidation.php';
+	require 'EmailValidation.php';
 	if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		if (isset($_POST['sublog'])) {
-			$query = "SELECT * from trainee
-			WHERE email =" . "'" . $_POST['log-emailfield'] . "'";
-			$fetcheduser = $conn->query($query);
-			if ($fetcheduser->num_rows == 0) {
+			$empty_field = checkEmpty($_POST);
+			if ($empty_field != null) {
 				echo "<script>
-				errdia('logerrordiag','User doesnot exist!');
+				logform= document.getElementById('loginform');
+				emptyfield = logform.elements['" . $empty_field . "'].placeholder;
+				errdia('logerrordiag','Please fill the '+emptyfield.toLowerCase());
+				</script>";
+			} elseif (!(isValidEmail($_POST['log-emailfield']))) {
+				echo "<script>
+				errdia('logerrordiag','Please add '@' and '.domain' in your email address.');
 				</script>";
 			} else {
-				$user = $fetcheduser->fetch_assoc();
-				if (password_verify($_POST['log-passfield'], $user['pw'])) {
-					$_SESSION['first_name'] = $user['first_name'];
-					$_SESSION['last_name'] = $user['last_name'];
-					$_SESSION['email'] = $user['email'];
-					$_SESSION['age'] = $user['age'];
-					$_SESSION['birth_date'] = $user['birth_date'];
-					$_SESSION['phone_number'] = $user['phone_number'];
-					$_SESSION['subscription'] = $user['subscribed'];
-					$_SESSION['gender'] = $user['gender'];
+				$query = "SELECT * from trainee
+				WHERE email =" . "'" . $_POST['log-emailfield'] . "'";
+				$fetcheduser = $conn->query($query);
+				if ($fetcheduser->num_rows == 0) {
 					echo "<script>
-					window.location.href= 'https://www.google.com';
+					errdia('logerrordiag','User doesnot exist!');
 					</script>";
 				} else {
-					echo "<script>
-					errdia('logerrordiag','Password is incorrect!');
-					</script>";
+					$user = $fetcheduser->fetch_assoc();
+					if (password_verify($_POST['log-passfield'], $user['pw'])) {
+						$_SESSION['first_name'] = $user['first_name'];
+						$_SESSION['last_name'] = $user['last_name'];
+						$_SESSION['email'] = $user['email'];
+						$_SESSION['age'] = $user['age'];
+						$_SESSION['birth_date'] = $user['birth_date'];
+						$_SESSION['phone_number'] = $user['phone_number'];
+						$_SESSION['subscription'] = $user['subscribed'];
+						$_SESSION['gender'] = $user['gender'];
+						echo "<script>
+						window.location.href= 'profile.php';
+						</script>";
+					} else {
+						echo "<script>
+						errdia('logerrordiag','Password is incorrect!');
+						</script>";
+					}
 				}
 			}
 		}
 		if (isset($_POST['subreg'])) {
-			$query = "SELECT * from trainee
-			WHERE email=" . "'" . $_POST['reg-emailfield'] . "'";
-			$fetcheduser = $conn->query($query);
-			if ($fetcheduser->num_rows == 1) {
+			$empty_field = checkEmpty($_POST);
+			if ($empty_field != null) {
 				echo "<script>
-					errdia('regerrordiag','Email is  already taken!');
-					</script>";
+				regform= document.getElementById('registerform');
+				emptyfield = regform.elements['" . $empty_field . "'].placeholder;
+				errdia('regerrordiag','Please fill the '+emptyfield.toLowerCase());
+				</script>";
+			} elseif (!(isValidEmail($_POST['reg-emailfield']))) {
+				echo "<script>
+				errdia('regerrordiag','Please add '@' and '.domain' in your email address.');
+				</script>";
+			} elseif (!(isValidTel($_POST['reg-telfield']))) {
+				echo "<script>
+				errdia('regerrordiag','Please write a valid phone number.');
+				</script>";
+			} else if (strlen($_POST['reg-passfield']) < 8) {
+				echo "<script>
+				errdia('regerrordiag','Password: min 8 characters and max 40 characters');
+				</script>";
+			} elseif ($_POST['reg-passfield'] != $_POST['reg-passcfield']) {
+				echo "<script>
+				errdia('regerrordiag','Password and confirmation password fields do not match.');
+				</script>";
 			} else {
 				$query = "SELECT * from trainee
-				WHERE phone_number =" . $_POST['reg-telfield'];
+				WHERE email=" . "'" . $_POST['reg-emailfield'] . "'";
 				$fetcheduser = $conn->query($query);
 				if ($fetcheduser->num_rows == 1) {
 					echo "<script>
+					errdia('regerrordiag','Email is  already taken!');
+					</script>";
+				} else {
+					$query = "SELECT * from trainee
+				WHERE phone_number =" . $_POST['reg-telfield'];
+					$fetcheduser = $conn->query($query);
+					if ($fetcheduser->num_rows == 1) {
+						echo "<script>
 						errdia('regerrordiag','phone number has been used before!');
 						</script>";
-				} else {
-					$query = "INSERT INTO trainee (email, pw,first_name,last_name,gender,phone_number,subscribed,birth_date,age)
-						VALUES ('" . $_POST['reg-emailfield'] . "','" . password_hash($_POST['reg-passfield'], PASSWORD_DEFAULT) . "','" . $_POST['reg-fnfield'] . "','" . $_POST['reg-lnfield'] . "','" . $_POST['reg-genderfield'] . "','" . $_POST['reg-telfield'] . "'," . 0 . ",'" . $_POST['reg-bdfield'] . "'," . 20 . ")";
-					if ($conn->query($query)) {
-						$_SESSION['first_name'] = $_POST['reg-fnfield'];
-						$_SESSION['last_name'] = $_POST['reg-lnfield'];
-						$_SESSION['gender'] = $_POST['reg-genderfield'];
-						$_SESSION['email'] = $_POST['reg-emailfield'];
-						$_SESSION['birth_date'] = $_POST['reg-bdfield'];
-						$_SESSION['phone_number'] = $_POST['reg-telfield'];
-						$_SESSION['age'] = 20;
-						$_SESSION['subscribed'] = 0;
-						echo "<script>
-						window.location.href= 'https://www.google.com';
-						</script>";
 					} else {
-						echo "<script>
+						$query = "INSERT INTO trainee (email, pw,first_name,last_name,gender,phone_number,subscribed,birth_date,age)
+						VALUES ('" . $_POST['reg-emailfield'] . "','" . password_hash($_POST['reg-passfield'], PASSWORD_DEFAULT) . "','" . $_POST['reg-fnfield'] . "','" . $_POST['reg-lnfield'] . "','" . $_POST['reg-genderfield'] . "','" . $_POST['reg-telfield'] . "'," . 0 . ",'" . $_POST['reg-bdfield'] . "'," . 20 . ")";
+						if ($conn->query($query)) {
+							$_SESSION['first_name'] = $_POST['reg-fnfield'];
+							$_SESSION['last_name'] = $_POST['reg-lnfield'];
+							$_SESSION['gender'] = $_POST['reg-genderfield'];
+							$_SESSION['email'] = $_POST['reg-emailfield'];
+							$_SESSION['birth_date'] = $_POST['reg-bdfield'];
+							$_SESSION['phone_number'] = $_POST['reg-telfield'];
+							$_SESSION['age'] = 20;
+							$_SESSION['subscribed'] = 0;
+							echo "<script>
+						window.location.href= 'profile.php';
+						</script>";
+						} else {
+							echo "<script>
 							errdia('regerrordiag','Try registering at a later time!');
 							</script>";
+						}
 					}
 				}
 			}

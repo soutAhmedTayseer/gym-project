@@ -1,108 +1,350 @@
-    
-     @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
-    * {
-        margin: 0;
-        padding: 0;
-        outline: none;
-        border: none;
-        text-decoration: none;
-        box-sizing: border-box;
-        transition: 0.2s linear;
-        text-transform: capitalize;
-        font-family: "Poppins", sans-serif;
-      }
-      body {
-        background: #000;
-      }
-      .btn {
-        margin-top: 2rem;
-        width: 150px;
-        padding: 12px;
-        color: #fff;
-        background: tomato;
-        font-size: 16px;
-        border-radius: 4px;
-        cursor: pointer;
-      }
-      .btn:hover {
-        background: rgba(212, 48, 48, 0.76);
-        transition: 0.4s;
-      }
-      /* Header */
-      .header {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 1000;
-        padding: 1.5rem 8%;
-        display: flex;
-        align-items: center;
-        color: #fff;
-        justify-content: space-between;
-      }
-      .header .logo {
-        font-size: 22px;
-        font-weight: bolder;
-        color: #fff;
-        padding-right: 10px;
-        margin-right: 20rem;
-      }
-      .header .logo i {
-        color: #fff;
-        padding: 0.5rem;
-      }
-      .header .navbar a {
-        font-size: 1.1rem;
-        margin: 0 1rem;
-        color: #fff;
-      }
-      .header .navbar a:hover {
-        color: #baa6cf;
-      }
-      .header .btn {
-        background: transparent;
-        color: tomato;
-        border: 1px solid tomato;
-        font-size: 12px;
-        padding: 8px;
-      }
+@import url("https://fonts.googleapis.com/css2?family=Philosopher:wght@700&family=Poppins:wght@300;400;500&display=swap");
 
-      /* Home Section */
-      .max-width {
-        max-width: 1300px;
-        padding: 0 80px;
-        margin: auto;
-      }
-      section {
-        padding: 50px 0 50px 0;
-      }
-      .home {
-        display: flex;
-      }
-      .home .max-width {
-        width: 100%;
-        display: flex;
-      }
-      .home .home-content {
-        width: 50%;
-        padding: 2rem;
-      }
-      .home h3 {
-        color: #fff;
-        margin-top: 6rem;
-        font-size: 5rem;
-        font-family: "Philosopher", sans-serif;
-      }
-      .home p {
-        color: rgb(194, 191, 191);
-        margin-top: 1rem;
-        font-size: 12px;
-      }
-      .home .home-image {
-        width: 50%;
-      }
-      .home .home-image img {
-        width: 100%;
-        height: 100%;
-      }
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    transition: 0.2s linear;
+    text-transform: capitalize;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #000;
+    overflow-x: hidden;
+}
+
+.btn {
+    margin-top: 2rem;
+    width: 150px;
+    padding: 12px;
+    color: #fff;
+    background: #d70338;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #ff0543;
+    box-shadow: 0 8px 24px 4px rgba(198, 46, 84, 0.274);
+}
+
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 1.5rem 8%;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    background-color: #000;
+    justify-content: space-between;
+}
+
+.header .logo {
+    font-size: 22px;
+    font-weight: bolder;
+    color: #fff;
+    padding-right: 10px;
+    margin-right: 20rem;
+}
+
+.header .logo i {
+    color: #fff;
+    padding: 0.5rem;
+}
+
+.header .navbar a {
+    font-size: 1.1rem;
+    margin: 0 1rem;
+    color: #fff;
+}
+
+.header .navbar a:hover {
+    background: #ff0543;
+    box-shadow: 0 8px 24px 4px rgba(198, 46, 84, 0.274);
+}
+
+.header .btn {
+    background: #d70338;
+    font-size: 12px;
+    padding: 8px;
+}
+
+/* Home Section */
+.max-width {
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+
+section {
+    padding: 50px 0 50px 0;
+}
+
+.home {
+    display: flex;
+}
+
+.home .max-width {
+    width: 100%;
+    display: flex;
+}
+
+.home .home-content {
+    width: 50%;
+    padding: 2rem;
+}
+
+.home h3 {
+    color: #fff;
+    margin-top: 6rem;
+    font-size: 5rem;
+    font-family: "Philosopher", sans-serif;
+}
+
+.home p {
+    color: rgb(194, 191, 191);
+    margin-top: 1rem;
+    font-size: 12px;
+}
+
+.home .home-image {
+    width: 50%;
+}
+
+.home .home-image img {
+    width: 100%;
+    height: 100%;
+}
+
+/*End Main*/
+
+/* preview*/
+
+.preview0 {
+    margin-left: 10px;
+    color: #000;
+    font-size: 20px;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.image-preview {
+    background-color: #dedede;
+    opacity: 1;
+    background-size: 9px 9px;
+    background-image: repeating-linear-gradient(45deg, #cccccc 0, #cccccc 0.9px, #dedede 0, #dedede 50%);
+}
+
+.preview h1 {
+    color: #000;
+    font-size: 40px;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.box {
+    margin: 0 110px;
+}
+
+.box img {
+    width: 150%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 4px 1px #d70338;
+    transition: 1s;
+    margin: 62px;
+}
+
+.box img:hover {
+    transform: scale(1.3);
+    z-index: 2;
+    box-shadow: 0px 0px 4px 1px #d70338;
+}
+
+/* end preview*/
+
+/*begin pricing*/
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: rgb(242, 242, 242);
+}
+
+.container h1 {
+    color: #000;
+    font-size: 40px;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.Price-row {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 25px;
+}
+
+.price-col {
+    background: #121313;
+    padding: 10% 15%;
+    border-radius: 10px;
+    color: #fff;
+    box-shadow: 4px 4px 4px 3px #bebebe;
+}
+
+.price-col h4 {
+    font-size: 52px;
+}
+
+.price-col h3 {
+    font-size: 44px;
+    margin: 20px 0 40px;
+    font-weight: 500;
+}
+
+.price-col h3 span {
+    font-size: 20px;
+    color: aqua;
+}
+
+.price-col ul {
+    text-align: left;
+    cursor: pointer;
+    margin: 20px 0;
+    color: #ddd;
+    list-style: none;
+}
+
+.price-col ul li {
+    margin: 15px 0;
+}
+
+.price-col ul li::before {
+    content: "\2022";
+    color: #fff;
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+.price-col button {
+    width: 100%;
+    padding: 14px 0;
+    background: #d70338;
+    border-radius: 6px;
+    margin-top: 30px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 20px;
+    box-shadow: 1px 1px 0px 3px #59091d;
+    transition: 1s;
+}
+
+.price-col button:active {
+    box-shadow: 1px 1px 0px 3px #59091d inset;
+}
+
+/*end pricng*/
+
+/*footer*/
+.footer {
+    position: relative;
+    width: 100%;
+    background: #121313;
+    min-height: 100px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.social-icon,
+.menu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+}
+
+.social-icon__item,
+.menu__item {
+    list-style: none;
+}
+
+.social-icon__link {
+    font-size: 2rem;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+.social-icon__link:hover {
+    transform: translateY(-10px);
+}
+
+.menu__link {
+    font-size: 1.2rem;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+    text-decoration: none;
+    opacity: 0.75;
+    font-weight: 300;
+}
+
+.menu__link:hover {
+    opacity: 1;
+}
+
+.footer p {
+    color: #fff;
+    margin: 15px 0 10px 0;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+@keyframes animateWaves {
+    0% {
+        background-position-x: 1000px;
+    }
+
+    100% {
+        background-positon-x: 0px;
+    }
+}
+
+@keyframes animate {
+    0% {
+        background-position-x: -1000px;
+    }
+
+    100% {
+        background-positon-x: 0px;
+    }
+}
+
+/* end footer */
+
+/* Rounded border */
+hr.rounded {
+    border-top: 5px solid #950740;
+    border-radius: 2px;
+    width: 50%;
+    margin-left: 500px;
+}

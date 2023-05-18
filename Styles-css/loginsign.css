@@ -5,7 +5,7 @@ body {
   font-weight: 300;
   line-height: 1.7;
   color: #ffffff;
-  background-color: #000000;
+  background: rgb(242, 242, 242);
 }
 
 a:hover {
@@ -38,6 +38,7 @@ h6 span {
   position: relative;
   width: 100%;
   display: block;
+  color: rgb(255, 255, 255);
 }
 
 .full-height {
@@ -60,7 +61,7 @@ h6 span {
   padding: 0;
   margin: 10px auto;
   cursor: pointer;
-  background: #950740;
+  background-color: #d70338;
 }
 
 .checkbox:checked+label:before,
@@ -70,8 +71,8 @@ h6 span {
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  color: #020305;
-  background-color: #ffffff;
+  color: #ffffff;
+  background-color: #121313;
   font-family: 'unicons';
   content: '\eb4f';
   z-index: 20;
@@ -120,7 +121,8 @@ h6 span {
 
 .card-back {
   transform: rotateY(180deg);
-  background: linear-gradient(30deg, #950740, #000000b0);
+  background: rgb(18, 19, 19);
+  box-shadow: 4px 4px 1px 3px #bebebe;
 }
 
 .checkbox:checked~.card-3d-wrap .card-3d-wrapper {
@@ -167,12 +169,13 @@ h6 span {
   line-height: 22px;
   letter-spacing: 0.5px;
   outline: none;
-  color: #c4c3ca;
-  background-color: #020305;
+  color: #000000;
+  background-color: #ffffff;
   border: none;
   -webkit-transition: all 200ms linear;
   transition: all 200ms linear;
-  box-shadow: 0 4px 8px 0 rgba(21, 21, 21, .2);
+  box-shadow: 0px 0px 3px 1px #121313 inset;
+
 }
 
 .form-style:focus,
@@ -208,22 +211,34 @@ h6 span {
   display: -ms-inline-flexbox;
   display: inline-flex;
   align-items: center;
-  background-color: #ffffff;
-  color: #000000;
+  background: #d70338;
+  color: #ffffff;
 }
 
 .btn:hover {
-  background-color: #000000;
-  background: linear-gradient(135deg, #000, #ffffff);
-  box-shadow: 0 8px 24px 0 rgba(16, 39, 112, .2);
+  color: white;
+  background: #ff0543;
+  box-shadow: 0 8px 24px 4px rgba(198, 46, 84, 0.274);
 }
 
+#background-video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
 
 .gender {
   position: relative;
   display: flex;
   gap: 20px;
 }
+
 
 
 .gender label {
@@ -260,7 +275,7 @@ h6 span {
   position: absolute;
   width: 100%;
   height: 2px;
-  background: #999;
+  background: #d70338;
   transform: rotate(45deg);
   transition: 0.5s;
 }
@@ -271,7 +286,7 @@ h6 span {
   position: absolute;
   width: 100%;
   height: 2px;
-  background: #999;
+  background: #d70338;
   transform: rotate(315deg);
   transition: 0.5s;
 }
@@ -284,11 +299,11 @@ h6 span {
 
 .gender label input:checked~i::before,
 .gender label input:checked~i::after {
-  background: #333;
+  background: white;
 }
 
 .gender label span {
-  color: #999;
+  color: #d70338;
   transition: 0.5s;
 }
 
@@ -297,7 +312,7 @@ h6 span {
   position: absolute;
   top: 0;
   left: -10px;
-  border: 3px solid #444;
+  border: 3px solid #d70338;
   width: 100%;
   height: 100%;
   border-radius: 30px;
@@ -309,7 +324,8 @@ h6 span {
 }
 
 .gender label:hover span::before {
-  border: 3px solid var(--clr);
+  border: 3px solid;
+  border-color: #ff1751;
 }
 
 .gender label input:checked~span::before {
@@ -319,6 +335,70 @@ h6 span {
     0 0 60px var(--clr);
 }
 
+
+
 .gender label input:checked~span {
-  color: #333;
+  color: white;
+}
+
+.mb-0 {
+  color: black;
+  margin-top: 81px;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 1.5rem 8%;
+  display: flex;
+  align-items: center;
+  background: rgb(18, 19, 19);
+  color: #fff;
+  justify-content: space-between;
+}
+
+.header .logo {
+  font-size: 22px;
+  font-weight: bolder;
+  color: #fff;
+  padding-right: 10px;
+  margin-right: 20rem;
+}
+
+.header .logo i {
+  color: #fff;
+  padding: 0.5rem;
+}
+
+.header .navbar a {
+  font-size: 1.1rem;
+  margin: 0 1rem;
+  color: #fff;
+}
+
+.header .navbar a:hover {
+  color: #baa6cf;
+}
+
+.uil-user:before {
+  color: black;
+}
+
+.uil-phone:before {
+  color: black;
+}
+
+.uil-at:before {
+  color: black;
+}
+
+.uil-lock-alt:before {
+  color: #000;
+}
+
+.uil-calendar-alt:before {
+  color: black;
 }
