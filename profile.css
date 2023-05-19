@@ -39,7 +39,6 @@ nav {
   height: 100vh;
   left: 0;
   width: 90px;
-  /* width: 280px; */
   background: #fff;
   overflow: hidden;
   transition: 1s;
@@ -274,8 +273,8 @@ table thead tr {
   background: white;
   box-shadow: 4px 4px 4px 3px #bebebe;
   border-radius: 10px;
-  color: #fff;
-  padding: 10px;
+  color: #121212;
+  padding: 20px;
   padding-left: 35px;
   transform: translate(141px, 35px);
   width: 480px;
@@ -367,8 +366,9 @@ table thead tr {
   background: white;
   box-shadow: 4px 4px 4px 3px #bebebe;
   border-radius: 10px;
-  color: #fff;
+  color: #121313;
   width: 480px;
+  padding: 10px;
   height: 420px;
   margin-left: 142px;
   margin-top: 56px;
@@ -413,12 +413,129 @@ table thead tr {
   box-shadow: 4px 4px 4px 3px #bebebe;
   border-radius: 10px;
   color: #fff;
+  padding: 10px;
   width: 480px;
   transform: translate(-279px, 0px);
   height: 420px;
   margin-left: 938px;
   margin-top: -420px;
+
 }
+
+.membership {
+  background: rgb(242, 242, 242);
+  box-shadow: 4px 4px 4px 3px #bebebe;
+  border-radius: 10px;
+  color: #fff;
+  padding: 10px;
+  width: 400px;
+  transform: translate(-919px, 446px);
+  height: 100px;
+  margin-left: 938px;
+  margin-top: -420px;
+
+}
+
+.membership_h {
+  background: rgb(255 255 255);
+  /* box-shadow: 4px 4px 4px 3px #bebebe; */
+  border-radius: 10px;
+  color: #fff;
+  padding: 10px;
+  width: 128px;
+  transform: translate(-941px, 422px);
+  height: 33px;
+  margin-left: 938px;
+  margin-top: -420px;
+}
+
+.hmember {
+  color: black;
+  font-size: 17px;
+  transform: translate(-3px, -6px);
+  font-weight: 500;
+}
+
+.content {
+  color: black;
+  font-size: 17px;
+  font-weight: 400;
+  width: 400px;
+  transform: translate(2px, -4px);
+}
+
+
+.streak {
+  background: rgb(242, 242, 242);
+  box-shadow: 4px 4px 4px 3px #bebebe;
+  border-radius: 10px;
+  color: #fff;
+  padding: 10px;
+  width: 400px;
+  transform: translate(-919px, 890px);
+  height: 100px;
+  margin-left: 938px;
+  margin-top: -420px;
+
+}
+
+.streak_h {
+  background: rgb(255 255 255);
+  /* box-shadow: 4px 4px 4px 3px #bebebe; */
+  border-radius: 10px;
+  color: #fff;
+  padding: 10px;
+  width: 79px;
+  transform: translate(-941px, 422px);
+  height: 33px;
+  margin-left: 938px;
+  margin-top: -420px;
+
+}
+
+.hstreak {
+  color: black;
+  font-size: 17px;
+  transform: translate(-3px, -6px);
+  font-weight: 500;
+}
+
+.extra {
+  background: rgb(242, 242, 242);
+  box-shadow: 4px 4px 4px 3px #bebebe;
+  border-radius: 10px;
+  color: #fff;
+  padding: 10px;
+  width: 400px;
+  transform: translate(-919px, 1334px);
+  height: 100px;
+  margin-left: 938px;
+  margin-top: -420px;
+
+}
+
+
+.extra_h {
+  background: rgb(255 255 255);
+  /* box-shadow: 4px 4px 4px 3px #bebebe; */
+  border-radius: 10px;
+  color: #fff;
+  padding: 10px;
+  width: 64px;
+  transform: translate(-941px, 422px);
+  height: 33px;
+  margin-left: 938px;
+  margin-top: -420px;
+}
+
+.hextra {
+  color: black;
+  font-size: 17px;
+  transform: translate(-3px, -6px);
+  font-weight: 500;
+}
+
+
 
 .price-col4 h4 {
   font-size: 52px;
@@ -449,7 +566,7 @@ table thead tr {
 
 .price-col4 ul li::before {
   content: "\2022";
-  color: #fff;
+  color: #121313;
   font-weight: bold;
   margin-right: 8px;
 }
@@ -512,8 +629,9 @@ table thead tr {
   background: white;
   box-shadow: 4px 4px 4px 3px #bebebe;
   border-radius: 10px;
-  color: #fff;
+  color: #121313;
   width: 480px;
+  padding: 20px;
   transform: translate(-279px, -476px);
   height: 420px;
   margin-left: 938px;
@@ -559,6 +677,7 @@ table thead tr {
   box-shadow: 4px 4px 4px 3px #bebebe;
   border-radius: 10px;
   color: #fff;
+  padding: 10px;
   width: 480px;
   transform: translate(234px, 0px);
   height: 420px;
