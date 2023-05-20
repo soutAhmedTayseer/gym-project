@@ -134,6 +134,87 @@ if (!isset($_SESSION['email']))
                     </div>
                 </div>
                 <div id="price-col3" class="price-col3" data-tilt>
+                    <div class="h_leaderboard">
+                        <div class="player1">
+                        <img class="first" src="../Assets/first.png" alt="" style="    width: 50px; transform: translate(-10px, -7px);">
+                        <div class="names">
+                        <h6>Moatasem Mohamed</h6>
+                        </div>
+
+                        </div>
+                        <div class="player2">
+                        <img class="first" src="../Assets/second.png" alt="" style="    width: 50px; transform: translate(-10px, -7px);">
+                        <div class="names">
+                        <h6>Moatasem Mohamed</h6>
+                        </div>
+
+                        </div>
+                        <div class="player3">
+                        <img class="first" src="../Assets/third.png" alt="" style="    width: 50px; transform: translate(-10px, -7px);">
+                        <div class="names">
+                        <h6>Moatasem Mohamed</h6>
+                        </div>
+
+                        </div>
+                        <div class="player4">
+                            <h6 style=" color: black; font-size: 20px;font-weight: 600;">4th</h6>
+                            <div class="name">
+                        <h6>Moatasem Mohamed</h6>
+                        </div>
+
+                        </div>
+                        <div class="player5">
+                        <h6 style=" color: black; font-size: 20px;font-weight: 600;">5th</h6>
+                        <div class="name">
+                        <h6>Moatasem Mohamed</h6>
+                        </div>
+                        
+
+                        </div>
+                        <div class="player6">
+                        <h6 style=" color: black; font-size: 20px;font-weight: 600;">6th</h6>
+                        <div class="name">
+                        <h6>Moatasem Mohamed</h6>
+                        </div>
+
+                        </div>
+                        <div class="player7">
+                        <h6 style=" color: black; font-size: 20px;font-weight: 600;">7th</h6>
+                        <div class="name">
+                        <h6>Moatasem Mohamed</h6>
+                        </div>
+
+                        </div>
+                        <div class="player8">
+                        <h6 style=" color: black; font-size: 20px;font-weight: 600;">8th</h6>
+                        <div class="name">
+                        <h6>Moatasem Mohamed</h6>
+                        </div>
+
+                        </div>
+                        <div class="player9">
+                        <h6 style=" color: black; font-size: 20px;font-weight: 600;">9th</h6>
+                        <div class="name">
+                        <h6>Moatasem Mohamed</h6>
+                        </div>
+
+                        </div>
+                        <div class="player10">
+                        <h6 style=" color: black; font-size: 20px;font-weight: 600;">10th</h6>
+                        <div class="name">
+                        <h6>Moatasem Mohamed</h6>
+                        </div>
+
+                        </div>
+                    </div>
+                    <div class="leaderboard">
+                        <h1>Leaderboard</h1>
+
+                    </div>
+                    <div class="x_leaderboard">
+                    <!-- <i id="trophy" class="fas fa-trophy fa-lg (100% increase)" style="color: #ffd700 ;"></i> -->
+                            <img class="trophy" src="../Assets/trophy.png" alt="">
+                    </div>
                 </div>
                 <div id="price-col4" class="price-col4" data-tilt>
                     <div class="membership">
